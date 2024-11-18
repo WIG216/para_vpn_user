@@ -1,0 +1,25 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "jsx": "react-native",        // Enable JSX for React Native
+    "module": "esnext",           // Use ES module syntax
+    "target": "esnext",           // Ensure modern JS features are supported
+    "lib": ["esnext", "dom"],     // Include DOM typings for React Native
+    "strict": true,               // Enable strict type checking
+    "esModuleInterop": true,      // For better interop with commonJS modules
+    "skipLibCheck": true,         // Skip type checking of declaration files
+    "moduleResolution": "node",   // Ensure Node.js module resolution
+    "allowJs": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
+}
